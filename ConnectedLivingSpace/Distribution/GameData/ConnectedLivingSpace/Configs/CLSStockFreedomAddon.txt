@@ -52,6 +52,33 @@
 	}
 }
 
+@PART[stackSeparatorMini]:HAS[!MODULE[ModuleConnectedLivingSpace]] 
+{
+    MODULE
+	{
+		name = ModuleConnectedLivingSpace
+		passable = true
+	}
+}
+
+@PART[stackDecouplerMini]:HAS[!MODULE[ModuleConnectedLivingSpace]] 
+{
+    MODULE
+	{
+		name = ModuleConnectedLivingSpace
+		passable = true
+	}
+}
+
+@PART[size3Decoupler]:HAS[!MODULE[ModuleConnectedLivingSpace]] 
+{
+    MODULE
+	{
+		name = ModuleConnectedLivingSpace
+		passable = true
+	}
+}
+
 @PART[adapterLargeSmallTri]:HAS[!MODULE[ModuleConnectedLivingSpace]] 
 {
     MODULE
@@ -71,6 +98,33 @@
 }
 
 @PART[adapterLargeSmallQuad]:HAS[!MODULE[ModuleConnectedLivingSpace]] 
+{
+    MODULE
+	{
+		name = ModuleConnectedLivingSpace
+		passable = true
+	}
+}
+
+@PART[stackBiCoupler]:HAS[!MODULE[ModuleConnectedLivingSpace]] 
+{
+    MODULE
+	{
+		name = ModuleConnectedLivingSpace
+		passable = true
+	}
+}
+
+@PART[stackQuadCoupler]:HAS[!MODULE[ModuleConnectedLivingSpace]] 
+{
+    MODULE
+	{
+		name = ModuleConnectedLivingSpace
+		passable = true
+	}
+}
+
+@PART[stackTriCoupler]:HAS[!MODULE[ModuleConnectedLivingSpace]] 
 {
     MODULE
 	{
@@ -177,6 +231,7 @@
 	{
 		name = ModuleConnectedLivingSpace
 		passable = true
+		passableWhenSurfaceAttached = true
 	}
 }
 
@@ -204,5 +259,14 @@
 	{
 		name = ModuleConnectedLivingSpace
 		passable = false // this is not an air-tight part by any stretch of the imagination, so including it here for completeness but setting its passability false
+	}
+}
+
+@PART[Size1to0ServiceModule]:HAS[!MODULE[ModuleConnectedLivingSpace]]:NEEDS[SquadExpansion] 
+{
+    MODULE
+	{
+		name = ModuleConnectedLivingSpace
+		passable = true	// to allow ApolloCSM-like "docking tunnel" surrounded by parachutes
 	}
 }
